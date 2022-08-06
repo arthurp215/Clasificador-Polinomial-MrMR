@@ -39,9 +39,9 @@ class Experiment:
     def test(self, X_test, y_test):
         y_pred = self.clfr.predict(X_test)	
         # Performance
-        prec = precision_score(y_test, y_pred, average='micro')
-        rec = recall_score(y_test, y_pred, average='micro')
-        f1 = f1_score(y_test, y_pred, average='micro')
+        prec = precision_score(y_test, y_pred, average='weighted')
+        rec = recall_score(y_test, y_pred, average='weighted')
+        f1 = f1_score(y_test, y_pred, average='weighted')
         return f1, prec, rec
 
     def computeClassifiers(self, X_tr, X_ts, y_tr, y_ts):
