@@ -12,6 +12,7 @@ import os
 from AttributeManager import AttributeManager
 from Experiments import Experiment
 
+# Search and select data files
 pathD = '../data/'  # Data's path
 contenido = os.listdir(pathD)
 csv = []
